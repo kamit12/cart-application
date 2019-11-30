@@ -1,0 +1,35 @@
+<div class="checkout-container">
+    <div class="container">
+        <div *ngIf="product_info_details">
+            <div *ngFor="let product_info of product_info_details;let i = index; " class="container-space">
+                <div class="checkout-container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{product_info.img_url}}" alt="item" class="checkout-img" />
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-details">
+                                {{product_info.name}}
+                            </div>
+                            <div>
+                                <span
+                                    class="discount-price">{{ (product_info.price - (product_info.price*product_info.discount)/100) | currency : 'INR'}}</span>
+                                <span class="actual-price">{{product_info.price}}</span>
+                                <span class="discount">{{product_info.discount}}% off</span>
+                                <span> <i class="fa fa-minus-circle minus-cart" aria-hidden="true"
+                                        (click)="minusItems(product_info)"></i>
+                                    <input type="text" class="item-count" name="itemCount" />
+                                    <i class="fa fa-plus-circle plus-cart" aria-hidden="true"
+                                        (click)="addItems(product_info)"></i>
+                                </span>
+                                <span class="remove-text">
+                                    REMOVE
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

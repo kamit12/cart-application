@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card-deck">
+        <div class="block" *ngFor=" let data of details">
+            <form>
+                <div class="card" style="width: 18rem;">
+                    <img src="{{data.img_url}}" class="card-img-top card-image" alt="..." />
+                    <div class="card-body">
+                        <p class="card-title card-details">{{data.name}}</p>
+                        <p class="card-text"><span
+                                class="discount-price">{{ (data.price - (data.price*data.discount)/100) | currency : 'INR'}}</span>
+                            <span class="actual-price">{{data.price}}</span>
+                            <span class="discount">{{data.discount}}% off</span></p>
+                        <div class="button-container">
+                            <!-- <a [routerLink]="['checkout',data.id]" class="cart-button">Add to Cart</a> -->
+                            <button class="cart-button" (click) = "addItems(data)">Add to Cart</button>
+                            <!-- <input type="submit" value="Add to Cart" /> -->
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

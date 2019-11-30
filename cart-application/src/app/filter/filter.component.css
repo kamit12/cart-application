@@ -1,0 +1,8 @@
+.text-header{
+    font-weight: bold;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}  

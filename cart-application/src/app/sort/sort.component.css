@@ -1,0 +1,28 @@
+.text-position{
+    /* padding-top: 2.5%; */
+    padding-left: 8.5%;
+}
+.text-header{
+    font-weight: bold;
+    float: left;
+} 
+
+
+.text-content{
+    display: flex;
+}
+
+.input-class{
+    font-weight: bold;
+    color:#C0C0C0;
+    width: 15%;
+    cursor: pointer;
+    /* float: left; */
+}
+
+p.input-class:hover{
+   /* color:  #2874f0; */
+   color: #2874f0;
+   text-decoration: underline;
+
+}

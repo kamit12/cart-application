@@ -1,0 +1,11 @@
+<div class = 'home-component'>
+    <div class="row">
+        <div class="col-md-2 col-xs-6">
+            <app-filter></app-filter>
+        </div>
+        <div class="col-md-10 col-xs-6">
+            <app-sort (sortDetails)="receiveselectSortInfo($event)"></app-sort>
+            <app-shopping-list [selectedValue]="selectedValue"></app-shopping-list>
+        </div>
+    </div>
+</div>
